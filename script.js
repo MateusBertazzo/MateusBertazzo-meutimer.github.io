@@ -19,3 +19,21 @@ function startTimer() {
     relogio.innerHTML = getTimeFronSecond(seconds)
   }, 1000)
 }
+
+iniciar.addEventListener('click', function(event) {
+  relogio.classList.remove('pausado')
+  clearInterval(timer);
+  startTimer();
+});
+
+pausar.addEventListener('click', function(event) {
+  relogio.classList.add('pausado')
+  clearInterval(timer);
+});
+
+zerar.addEventListener('click', function(event) {
+  relogio.classList.remove('pausado')
+  clearInterval(timer);
+  relogio.innerHTML = '00:00:00';
+  seconds = 0;
+});
