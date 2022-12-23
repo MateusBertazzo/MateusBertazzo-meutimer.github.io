@@ -12,3 +12,10 @@ const pausar = document.querySelector('.pausar');
 const zerar = document.querySelector('.zerar');
 let seconds = 0;
 let timer;
+
+function startTimer() {
+  timer = setInterval(function() {
+    seconds ++;
+    relogio.innerHTML = getTimeFronSecond(seconds)
+  }, 1000)
+}
